@@ -33,36 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         typeLetter();
     }, 100);
 
-    document.getElementById('contactForm').addEventListener('submit', async function (event) {
-        event.preventDefault();
 
-        const formData = new FormData(this);
-        const data = {};
-        formData.forEach((value, key) => { data[key] = value; });
-
-        try {
-            const response = await fetch('https://formsubmit.co/srinivasaraofullstackdev@gmail.com', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-
-            const result = await response.json();
-            document.getElementById('formResponse').textContent = 'Form submitted successfully!';
-
-            window.location.href = window.location.href;
-
-        } catch (error) {
-            console.error('Error:', error);
-            document.getElementById('formResponse').textContent = 'There was an error submitting the form.';
-        }
-    });
 
 });
 
