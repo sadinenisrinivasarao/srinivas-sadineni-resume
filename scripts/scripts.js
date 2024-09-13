@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
         typeLetter();
     }, 100);
 
-
-
 });
+
+
 
 
