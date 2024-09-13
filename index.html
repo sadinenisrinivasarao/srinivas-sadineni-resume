@@ -223,16 +223,18 @@
                     </div>
                 </div>
             </div>
-            <form action="https://formsubmit.co/3eba9a19173295f335f5cfbbc876ff7b" method="POST" class="contact-right srinivas-flex">
+            <form id="contactForm" class="contact-right srinivas-flex">
                 <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name">
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 <label for="message">Enter a message</label>
-                <textarea name="message" id="message" placeholder="Leave a message"></textarea>
+                <textarea name="message" id="message" placeholder="Leave a message" required></textarea>
             
                 <button type="submit" class="sri-resume-btn srinivas-animation">Submit</button>
             </form>
+            <div id="formResponse"></div>
+            
         </div>
     </section>
 

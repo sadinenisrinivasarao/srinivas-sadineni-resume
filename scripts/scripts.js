@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const typingText = document.getElementById('typing-text');
     const fullText = 'Srinivasa Rao Sadineni,';
     let index = 0;
-    const typingSpeed = 100; // Speed in milliseconds
+    const typingSpeed = 100;
 
     function typeLetter() {
         if (index < fullText.length) {
@@ -23,13 +23,47 @@ document.addEventListener('DOMContentLoaded', function () {
             index++;
             setTimeout(typeLetter, typingSpeed);
         } else {
-            // Once typing is finished, fade in the rest of the content
+
             document.getElementById('rest-text').style.opacity = 1;
         }
     }
 
-    // Start the typing effect after "I'm" fades in
+
     setTimeout(() => {
         typeLetter();
-    }, 100);  // Match the delay of the fade-in for "I'm"
+    }, 100);
+
+    document.getElementById('contactForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const data = {};
+        formData.forEach((value, key) => { data[key] = value; });
+
+        try {
+            const response = await fetch('https://formsubmit.co/srinivasaraofullstackdev@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const result = await response.json();
+            document.getElementById('formResponse').textContent = 'Form submitted successfully!';
+
+            window.location.href = window.location.href;
+
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('formResponse').textContent = 'There was an error submitting the form.';
+        }
+    });
+
 });
+
+
