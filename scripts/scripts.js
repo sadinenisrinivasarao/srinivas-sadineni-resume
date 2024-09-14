@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const typingText = document.getElementById('typing-text');
     const fullText = 'Srinivasa Rao Sadineni,';
     let index = 0;
-    const typingSpeed = 100;
+    const typingSpeed = 50;
 
     function typeLetter() {
         if (index < fullText.length) {
@@ -32,6 +32,24 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
         typeLetter();
     }, 100);
+
+
+    const sections = document.querySelectorAll('.sri-container-items');
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 
 });
 

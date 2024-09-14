@@ -486,10 +486,11 @@ footer p {
 
 }
 
+
 .srinivas-resume {
     opacity: 0;
-    animation: fadeInEffect 3s ease forwards;
-    animation-delay: 3s;
+    animation: fadeInEffect 2s ease forwards;
+    animation-delay: 2s;
 }
 
 .my-image-sri {
@@ -506,15 +507,7 @@ footer p {
     animation: fadeInEffect 1s forwards;
 }
 
-@keyframes fadeInEffect {
-    0% {
-        opacity: 0;
-    }
 
-    100% {
-        opacity: 1;
-    }
-}
 
 .typing {
     white-space: nowrap;
@@ -527,15 +520,7 @@ footer p {
 }
 
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
 
-    to {
-        opacity: 1;
-    }
-}
 
 
 
@@ -545,6 +530,28 @@ footer p {
     transform-origin: center;
 }
 
+
+.sri-container-items {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.sri-container-items.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInEffect {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes rotate-image {
     from {
         transform: rotateY(180deg);
@@ -552,5 +559,14 @@ footer p {
 
     to {
         transform: rotateY(360deg);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
