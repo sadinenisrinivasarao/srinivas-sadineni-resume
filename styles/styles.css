@@ -585,3 +585,8 @@ footer p {
         opacity: 1;
     }
 }
+
+.navbar.sticky {
+    border-bottom: 2px solid;
+    padding: 0.5rem 6rem
+}

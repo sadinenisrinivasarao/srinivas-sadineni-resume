@@ -51,6 +51,16 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(section);
     });
 
+    const navbar = document.getElementsByClassName("navbar")[0];
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky")
+
+        }
+    });
+
 });
 
 
