@@ -228,15 +228,22 @@
                 </div>
             </div>
             <form action="https://formsubmit.co/srinivasaraofullstackdev@gmail.com" method="POST" class="contact-right srinivas-flex">
+                <input type="hidden" name="_subject" value="New submission!">
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you"> <!-- Redirect after submission -->
+                <input type="hidden" name="_honeypot" value=""> <!-- Honeypot for spam bots -->
+            
                 <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name">
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
                 <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
                 <label for="message">Enter a message</label>
-                <textarea name="message" id="message" placeholder="Leave a message"></textarea>
+                <textarea name="message" id="message" placeholder="Leave a message" required></textarea>
             
                 <button type="submit" class="sri-resume-btn srinivas-animation">Submit</button>
             </form>
+            
         </div>
     </section>
 
