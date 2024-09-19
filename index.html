@@ -228,10 +228,16 @@
                 </div>
             </div>
             <form action="https://formsubmit.co/srinivasaraofullstackdev@gmail.com" method="POST" class="contact-right srinivas-flex">
-                <input type="hidden" name="_subject" value="New submission!">
-                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you"> <!-- Redirect after submission -->
-                <input type="hidden" name="_honeypot" value=""> <!-- Honeypot for spam bots -->
+                <!-- Honeypot field for spam bots -->
+                <input type="hidden" name="_honeypot" value="" />
+                
+                <!-- Subject of the email -->
+                <input type="hidden" name="_subject" value="New Form Submission" />
             
+                <!-- Redirect after successful submission -->
+                <input type="hidden" name="_next" value="https://srinivasarao-sadineni-portfolio.vercel.app/thank-you" />
+            
+                <!-- Form fields -->
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
             
@@ -243,6 +249,7 @@
             
                 <button type="submit" class="sri-resume-btn srinivas-animation">Submit</button>
             </form>
+            
             
         </div>
     </section>
