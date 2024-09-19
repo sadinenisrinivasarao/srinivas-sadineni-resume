@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function clearForm() {
-        document.getElementById('contact-form').reset();
+        document.getElementById('contact-right').reset();
     }
 });
 
