@@ -227,17 +227,7 @@
                     </div>
                 </div>
             </div>
-            <form action="https://formsubmit.co/srinivasaraofullstackdev@gmail.com" method="POST" class="contact-right srinivas-flex">
-                <!-- Honeypot field for spam bots -->
-                <input type="hidden" name="_honeypot" value="" />
-                
-                <!-- Subject of the email -->
-                <input type="hidden" name="_subject" value="New Form Submission" />
-            
-                <!-- Redirect after successful submission -->
-                <input type="hidden" name="_next" value="https://srinivasarao-sadineni-portfolio.vercel.app/thank-you" />
-            
-                <!-- Form fields -->
+            <form action="https://formspree.io/f/xblrvdop" method="POST" class="contact-right srinivas-flex">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
             
@@ -247,8 +237,18 @@
                 <label for="message">Enter a message</label>
                 <textarea name="message" id="message" placeholder="Leave a message" required></textarea>
             
+                <!-- Redirect after successful submission -->
+                <input type="hidden" name="_next" value="https://srinivasarao-sadineni-portfolio.vercel.app/thank-you" />
+                
+                <!-- Optional fields to handle spam prevention -->
+                <input type="hidden" name="_captcha" value="false">
+                <p hidden>
+                    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                </p>
+            
                 <button type="submit" class="sri-resume-btn srinivas-animation">Submit</button>
             </form>
+            
             
             
         </div>
