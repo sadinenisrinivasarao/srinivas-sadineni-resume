@@ -9,6 +9,11 @@ navOpen.addEventListener('click', () => {
 navClose.addEventListener('click', () => {
     nav.style.right = "-20rem";
 })
+document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible') {
+        location.reload();
+    }
+});
 
 document.addEventListener('DOMContentLoaded', function () {
 
