@@ -66,9 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    function clearForm() {
-        document.getElementById('contact-right').reset();
-    }
+   
 });
 
 
