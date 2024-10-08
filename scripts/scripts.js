@@ -1,7 +1,9 @@
 const navOpen = document.querySelector('.fa-bars');
 const navClose = document.querySelector('.fa-x');
 const nav = document.querySelector('.srinivas-nav-menu');
-
+window.onload = function() {
+    window.scrollTo(0, 0); 
+  };
 navOpen.addEventListener('click', () => {
     nav.style.right = "0";
 })
