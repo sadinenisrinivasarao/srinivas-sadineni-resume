@@ -55,7 +55,7 @@ body {
 .srinivas-resume:hover,
 .nav-sri-resume-btn:hover,
 .each-skill-div:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
 }
 
 .grid-sri-container div:hover {
@@ -589,4 +589,26 @@ footer p {
 .navbar.sticky {
     border-bottom: 2px solid;
     padding: 0.5rem 6rem
+}
+
+
+fieldset div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.5rem;
+}
+
+fieldset label {
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    text-align: center;
+}
+
+legend {
+    display: inline-block;
+    padding: 0 10px;
 }
