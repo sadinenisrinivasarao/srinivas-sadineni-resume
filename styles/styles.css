@@ -55,7 +55,7 @@ body {
 .srinivas-resume:hover,
 .nav-sri-resume-btn:hover,
 .each-skill-div:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .grid-sri-container div:hover {
