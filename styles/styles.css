@@ -52,10 +52,15 @@ body {
 
 
 
-.srinivas-resume:hover,
+.srinivas-resume img:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
 .nav-sri-resume-btn:hover,
 .each-skill-div:hover {
     transform: scale(1.05);
+    transition: 1s;
 }
 
 .grid-sri-container div:hover {
@@ -184,16 +189,6 @@ body {
 .srinivas span {
     font-size: 3rem;
     text-align: center;
-}
-
-.srinivas-resume {
-    padding: 1rem 2rem;
-    border-radius: 2rem;
-    border: 2px solid #fff;
-    background-color: black;
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    text-decoration: none;
 }
 
 
@@ -478,16 +473,10 @@ footer p {
 
     #srinivas-home {
         justify-content: center;
-        height: 80vh;
+        height: 100vh;
     }
 
-    .srinivas-resume {
-        text-align: center;
-        width: 20rem;
-        font-size: 2rem;
-        padding: 1rem;
-        background: linear-gradient(267deg, #83b6ff 25%, #83b6ff 1%, #561bf9 100%);
-    }
+
 
     .grid-sri-container {
         grid-template-columns: 1fr;
@@ -500,11 +489,29 @@ footer p {
 
 }
 
+.srinivas-resume img {
+    width: 5rem;
+}
+
+.heading_sep {
+    width: 25rem;
+    height: 0.2rem;
+    background: linear-gradient(267deg, #1a76f9, #7483f1, #a5aef1);
+    border: transparent;
+    margin: 2rem 0rem;
+}
 
 .srinivas-resume {
     opacity: 0;
     animation: fadeInEffect 2s ease forwards;
     animation-delay: 2s;
+
+}
+
+.Linkin_Git_Resume {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
 }
 
 .my-image-sri {
