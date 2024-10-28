@@ -3,6 +3,9 @@ const navClose = document.querySelector('.fa-x');
 const nav = document.querySelector('.srinivas-nav-menu');
 
 
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
 window.onload = function () {
     window.scrollTo(0, 0);
 };
