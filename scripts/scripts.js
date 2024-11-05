@@ -2,7 +2,8 @@ window.onload = function () {
     const navOpen = document.querySelector('.fa-bars');
     const navClose = document.querySelector('.fa-x');
     const nav = document.querySelector('.srinivas-nav-menu');
-
+    const intro_pic = document.querySelector('.intro-pic');
+    const intro_text = document.getElementById('intro-text');
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
     }
@@ -16,7 +17,7 @@ window.onload = function () {
     navClose.addEventListener('click', () => {
         nav.style.right = "-20rem";
     });
-
+    intro_text.textContent = "I'm"
     document.addEventListener('visibilitychange', function () {
         if (document.visibilityState === 'visible') {
             location.reload();
@@ -58,7 +59,7 @@ window.onload = function () {
     sections.forEach(section => {
         observer.observe(section);
     });
-
+    intro_pic.src = "./assets/dev-pic.png"
     const navbar = document.getElementsByClassName("navbar")[0];
     window.addEventListener("scroll", function () {
         if (window.scrollY > 50) {
@@ -67,4 +68,6 @@ window.onload = function () {
             navbar.classList.remove("sticky");
         }
     });
+
+
 };
