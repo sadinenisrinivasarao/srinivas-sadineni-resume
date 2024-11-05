@@ -1,28 +1,27 @@
-const navOpen = document.querySelector('.fa-bars');
-const navClose = document.querySelector('.fa-x');
-const nav = document.querySelector('.srinivas-nav-menu');
-
-
-if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-}
 window.onload = function () {
-    window.scrollTo(0, 0);
-};
-navOpen.addEventListener('click', () => {
-    nav.style.right = "0";
-})
+    const navOpen = document.querySelector('.fa-bars');
+    const navClose = document.querySelector('.fa-x');
+    const nav = document.querySelector('.srinivas-nav-menu');
 
-navClose.addEventListener('click', () => {
-    nav.style.right = "-20rem";
-})
-document.addEventListener('visibilitychange', function () {
-    if (document.visibilityState === 'visible') {
-        location.reload();
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
     }
-});
 
-document.addEventListener('DOMContentLoaded', function () {
+    window.scrollTo(0, 0);
+
+    navOpen.addEventListener('click', () => {
+        nav.style.right = "0";
+    });
+
+    navClose.addEventListener('click', () => {
+        nav.style.right = "-20rem";
+    });
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'visible') {
+            location.reload();
+        }
+    });
 
     const typingText = document.getElementById('typing-text');
     const fullText = 'Srinivasa Rao Sadineni,';
@@ -34,18 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
             typingText.textContent += fullText.charAt(index);
             index++;
             setTimeout(typeLetter, typingSpeed);
-
         } else {
-
             document.getElementById('rest-text').style.opacity = 1;
         }
     }
 
-
     setTimeout(() => {
         typeLetter();
     }, 100);
-
 
     const sections = document.querySelectorAll('.sri-container-items');
     const observer = new IntersectionObserver((entries, observer) => {
@@ -69,14 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (window.scrollY > 50) {
             navbar.classList.add("sticky");
         } else {
-            navbar.classList.remove("sticky")
-
+            navbar.classList.remove("sticky");
         }
     });
-
-
-});
-
-
-
-
+};
