@@ -649,3 +649,96 @@ legend {
     display: inline-block;
     padding: 0 10px;
 }
+
+
+
+.carousel {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.reviewed-person {
+    font-size: 1.25em;
+    color: #333;
+}
+
+.reviewed-person-designation,
+.review {
+    font-size: 1em;
+    color: #333;
+}
+
+.reviewed-person {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.reviewed-person-designation {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.review {
+    line-height: 1.5em;
+    padding: 0 10px;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.carousel-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.carousel-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .carousel-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+.sri-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

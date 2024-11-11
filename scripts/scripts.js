@@ -69,5 +69,67 @@ window.onload = function () {
         }
     });
 
+    const track = document.querySelector('.carousel-track');
+    const items = Array.from(track.children);
+    const nextButton = document.getElementById('nextButton');
+    const prevButton = document.getElementById('prevButton');
+
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    function updateCarousel() {
+        const itemWidth = items[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+    }
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+        }, 3000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+
+    nextButton.addEventListener('click', () => {
+        stopAutoSlide();
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel();
+        startAutoSlide();
+    });
+
+    prevButton.addEventListener('click', () => {
+        stopAutoSlide();
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateCarousel();
+        startAutoSlide();
+    });
+
+    let startX;
+    track.addEventListener('touchstart', (e) => {
+        stopAutoSlide();
+        startX = e.touches[0].clientX;
+    });
+
+    track.addEventListener('touchmove', (e) => {
+        const deltaX = e.touches[0].clientX - startX;
+        if (deltaX > 50) {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel();
+            startX = e.touches[0].clientX;
+        } else if (deltaX < -50) {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+            startX = e.touches[0].clientX;
+        }
+        startAutoSlide();
+    });
+
+    updateCarousel();
+    startAutoSlide();
+
 
 };
+
